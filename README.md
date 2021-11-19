@@ -1,7 +1,5 @@
 # Akatsuki_KasirBarbershop
- ==========================
-# Stay cool wiht coding
- ==========================
+ Stay cool wiht coding
  Anggota : 1. Aditya Rosiadi (2008017010035)
            2. Cut Nurhidayanti (2008017010027)
            3. Dhafa Aryanda (2008017010032)
