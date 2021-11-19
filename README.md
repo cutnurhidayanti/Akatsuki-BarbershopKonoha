@@ -1,7 +1,7 @@
 # Akatsuki_KasirBarbershop
 Reposiroty Project akhir lab PBO B
 
-### Stay cool wiht coding**
+### Stay cool with coding**
 
 ### Kelompok Akatsuki
 project Aplikasi Kasir Barbershop
