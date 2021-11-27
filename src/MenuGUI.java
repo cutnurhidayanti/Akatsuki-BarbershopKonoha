@@ -354,7 +354,7 @@ public class MenuGUI extends javax.swing.JFrame {
 
         jButton20.setBackground(new java.awt.Color(102, 102, 255));
         jButton20.setForeground(new java.awt.Color(255, 255, 255));
-        jButton20.setText("Data Diri");
+        jButton20.setText("Data Pribadi");
         jButton20.setBorder(null);
 
         jButton21.setBackground(new java.awt.Color(102, 102, 255));
