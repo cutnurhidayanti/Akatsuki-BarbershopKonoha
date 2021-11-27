@@ -145,7 +145,7 @@ public class MenuGUI extends javax.swing.JFrame {
 
         jButton11.setText("-");
 
-        jLabel5.setText(" CukurJanggut");
+        jLabel5.setText(" CukurJenggot");
         jLabel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jButton12.setText("+");
