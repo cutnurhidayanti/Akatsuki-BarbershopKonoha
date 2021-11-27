@@ -1,7 +1,7 @@
 # Akatsuki_KasirBarbershop
 Reposiroty Project akhir lab PBO B
 
-###Deskripsi
+## Deskripsi
 Kelompok Akatsuki adalah kelompok pendiri Barbershop yang bernama Barbershop Konohagakure, dimana Barbershop ini diperuntukkan bagi para ninja dan masyarakat Konoha Khususnya dan masyarakat lain pada umumnya
 
 ## Kelompok Akatsuki
