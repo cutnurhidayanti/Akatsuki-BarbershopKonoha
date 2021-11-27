@@ -1,12 +1,13 @@
 # Akatsuki_KasirBarbershop
 Reposiroty Project akhir lab PBO B
 
-### Stay cool with coding**
+##Deskripsi
+Kelompok Akatsuki adalah kelompok pendiri Barbershop yang bernama Barbershop Konohagakure, dimana Barbershop ini diperuntukkan bagi para ninja dan masyarakat Konoha Khususnya dan masyarakat lain pada umumnya
 
-### Kelompok Akatsuki
+## Kelompok Akatsuki
 project Aplikasi Kasir Barbershop
 
-### Anggota : 
+## Anggota : 
               1. Aditya Rosiadi (2008017010035)
               2. Cut Nurhidayanti (2008017010027)
               3. Dhafa Aryanda (2008017010032)
