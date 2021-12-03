@@ -9,6 +9,15 @@
  * @author Win1O
  */
 public class MenuGUI extends javax.swing.JFrame {
+    
+    private Integer jmlPotongRambutAnak = 0;
+    private Integer jmlPotongRambutRemaja = 0;
+    private Integer jmlPotongRambutDewasa = 0;
+    private Integer jmlCukurKumis = 0;
+    private Integer jmlCukurJanggut = 0;
+    private Integer jmlKeramasPijat = 0;
+    private Integer jmlMaskerRambut = 0;
+    private Integer jmlSemirRambut = 0;
 
     /**
      * Creates new form MenuGUI
@@ -35,46 +44,46 @@ public class MenuGUI extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
+        TextFieldPotongRambutAnak = new javax.swing.JTextField();
+        TextFieldPotongRambutRemaja = new javax.swing.JTextField();
+        TextFieldPotongRambutDewasa = new javax.swing.JTextField();
+        ButtonTambahAnak = new javax.swing.JButton();
+        ButtonKurangAnak = new javax.swing.JButton();
+        ButtonTambahRemaja = new javax.swing.JButton();
+        ButtonKurangRemaja = new javax.swing.JButton();
+        ButtonTambahDewasa = new javax.swing.JButton();
+        ButtonKurangDewasa = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
-        jButton10 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
+        TextFieldCukurKumis = new javax.swing.JTextField();
+        ButtonTambahCukurKumis = new javax.swing.JButton();
+        ButtonKurangCukurKumis = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
-        jButton12 = new javax.swing.JButton();
-        jButton13 = new javax.swing.JButton();
-        jTextField6 = new javax.swing.JTextField();
-        jButton14 = new javax.swing.JButton();
+        TextFieldCukurJenggot = new javax.swing.JTextField();
+        ButtonTambahCukurJenggot = new javax.swing.JButton();
+        ButtonKurangCukurJenggot = new javax.swing.JButton();
+        TextFieldKeramasPijat = new javax.swing.JTextField();
+        ButtonTambahKeramasPijat = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
-        jButton15 = new javax.swing.JButton();
-        jTextField7 = new javax.swing.JTextField();
-        jButton16 = new javax.swing.JButton();
+        ButtonKurangKeramasPijat = new javax.swing.JButton();
+        TextFieldMaskerRambut = new javax.swing.JTextField();
+        ButtonTambahMaskerRambut = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
-        jButton17 = new javax.swing.JButton();
-        jButton18 = new javax.swing.JButton();
-        jTextField8 = new javax.swing.JTextField();
+        ButtonKurangMaskerRambut = new javax.swing.JButton();
+        ButtonKurangSemirRambut = new javax.swing.JButton();
+        TextFieldSemirRambut = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
-        jButton19 = new javax.swing.JButton();
+        ButtonTambahSemirRambut = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jTextField9 = new javax.swing.JTextField();
-        jTextField10 = new javax.swing.JTextField();
+        TextFieldIsiNama = new javax.swing.JTextField();
+        TextFieldIsiNoKursi = new javax.swing.JTextField();
         jButton20 = new javax.swing.JButton();
         jButton21 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        TextAreaTotalBelanja = new javax.swing.JTextArea();
         jButton22 = new javax.swing.JButton();
-        jTextField12 = new javax.swing.JTextField();
+        TextFieldBayar = new javax.swing.JTextField();
         jButton23 = new javax.swing.JButton();
 
         jTextField11.setText("jTextField11");
@@ -136,52 +145,180 @@ public class MenuGUI extends javax.swing.JFrame {
         jLabel3.setText(" Potong Rambut Remaja");
         jLabel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jButton4.setText("+");
+        TextFieldPotongRambutAnak.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TextFieldPotongRambutAnakActionPerformed(evt);
+            }
+        });
 
-        jButton5.setText("-");
+        TextFieldPotongRambutRemaja.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TextFieldPotongRambutRemajaActionPerformed(evt);
+            }
+        });
 
-        jButton6.setText("+");
+        TextFieldPotongRambutDewasa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TextFieldPotongRambutDewasaActionPerformed(evt);
+            }
+        });
 
-        jButton7.setText("-");
+        ButtonTambahAnak.setText("+");
+        ButtonTambahAnak.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonTambahAnakActionPerformed(evt);
+            }
+        });
 
-        jButton8.setText("+");
+        ButtonKurangAnak.setText("-");
+        ButtonKurangAnak.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonKurangAnakActionPerformed(evt);
+            }
+        });
 
-        jButton9.setText("-");
+        ButtonTambahRemaja.setText("+");
+        ButtonTambahRemaja.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonTambahRemajaActionPerformed(evt);
+            }
+        });
+
+        ButtonKurangRemaja.setText("-");
+        ButtonKurangRemaja.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonKurangRemajaActionPerformed(evt);
+            }
+        });
+
+        ButtonTambahDewasa.setText("+");
+        ButtonTambahDewasa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonTambahDewasaActionPerformed(evt);
+            }
+        });
+
+        ButtonKurangDewasa.setText("-");
+        ButtonKurangDewasa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonKurangDewasaActionPerformed(evt);
+            }
+        });
 
         jLabel4.setText(" Cukur Kumis");
         jLabel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jButton10.setText("+");
+        TextFieldCukurKumis.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TextFieldCukurKumisActionPerformed(evt);
+            }
+        });
 
-        jButton11.setText("-");
+        ButtonTambahCukurKumis.setText("+");
+        ButtonTambahCukurKumis.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonTambahCukurKumisActionPerformed(evt);
+            }
+        });
+
+        ButtonKurangCukurKumis.setText("-");
+        ButtonKurangCukurKumis.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonKurangCukurKumisActionPerformed(evt);
+            }
+        });
 
         jLabel5.setText(" CukurJenggot");
         jLabel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jButton12.setText("+");
+        TextFieldCukurJenggot.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TextFieldCukurJenggotActionPerformed(evt);
+            }
+        });
 
-        jButton13.setText("-");
+        ButtonTambahCukurJenggot.setText("+");
+        ButtonTambahCukurJenggot.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonTambahCukurJenggotActionPerformed(evt);
+            }
+        });
 
-        jButton14.setText("+");
+        ButtonKurangCukurJenggot.setText("-");
+        ButtonKurangCukurJenggot.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonKurangCukurJenggotActionPerformed(evt);
+            }
+        });
+
+        TextFieldKeramasPijat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TextFieldKeramasPijatActionPerformed(evt);
+            }
+        });
+
+        ButtonTambahKeramasPijat.setText("+");
+        ButtonTambahKeramasPijat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonTambahKeramasPijatActionPerformed(evt);
+            }
+        });
 
         jLabel6.setText(" Keramas + Pijat");
         jLabel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jButton15.setText("-");
+        ButtonKurangKeramasPijat.setText("-");
+        ButtonKurangKeramasPijat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonKurangKeramasPijatActionPerformed(evt);
+            }
+        });
 
-        jButton16.setText("+");
+        TextFieldMaskerRambut.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TextFieldMaskerRambutActionPerformed(evt);
+            }
+        });
+
+        ButtonTambahMaskerRambut.setText("+");
+        ButtonTambahMaskerRambut.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonTambahMaskerRambutActionPerformed(evt);
+            }
+        });
 
         jLabel7.setText(" Masker Rambut");
         jLabel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jButton17.setText("-");
+        ButtonKurangMaskerRambut.setText("-");
+        ButtonKurangMaskerRambut.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonKurangMaskerRambutActionPerformed(evt);
+            }
+        });
 
-        jButton18.setText("-");
+        ButtonKurangSemirRambut.setText("-");
+        ButtonKurangSemirRambut.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonKurangSemirRambutActionPerformed(evt);
+            }
+        });
+
+        TextFieldSemirRambut.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TextFieldSemirRambutActionPerformed(evt);
+            }
+        });
 
         jLabel8.setText(" Semir Rambut");
         jLabel8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jButton19.setText("+");
+        ButtonTambahSemirRambut.setText("+");
+        ButtonTambahSemirRambut.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonTambahSemirRambutActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -198,70 +335,70 @@ public class MenuGUI extends javax.swing.JFrame {
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(TextFieldPotongRambutAnak, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jButton4)
+                                .addComponent(ButtonTambahAnak)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton5))
+                                .addComponent(ButtonKurangAnak))
                             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addGroup(jPanel2Layout.createSequentialGroup()
                                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(18, 18, 18)
-                                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(TextFieldCukurKumis, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(jButton10)
+                                    .addComponent(ButtonTambahCukurKumis)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jButton11))
+                                    .addComponent(ButtonKurangCukurKumis))
                                 .addGroup(jPanel2Layout.createSequentialGroup()
                                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                         .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGap(18, 18, 18)
                                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(TextFieldPotongRambutDewasa, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(TextFieldPotongRambutRemaja, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addGroup(jPanel2Layout.createSequentialGroup()
-                                            .addComponent(jButton6)
+                                            .addComponent(ButtonTambahRemaja)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(jButton7))
+                                            .addComponent(ButtonKurangRemaja))
                                         .addGroup(jPanel2Layout.createSequentialGroup()
-                                            .addComponent(jButton8)
+                                            .addComponent(ButtonTambahDewasa)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(jButton9))))
+                                            .addComponent(ButtonKurangDewasa))))
                                 .addGroup(jPanel2Layout.createSequentialGroup()
                                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(18, 18, 18)
-                                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(TextFieldCukurJenggot, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(jButton12)
+                                    .addComponent(ButtonTambahCukurJenggot)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jButton13))
+                                    .addComponent(ButtonKurangCukurJenggot))
                                 .addGroup(jPanel2Layout.createSequentialGroup()
                                     .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(18, 18, 18)
-                                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(TextFieldKeramasPijat, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(jButton14)
+                                    .addComponent(ButtonTambahKeramasPijat)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jButton15))
+                                    .addComponent(ButtonKurangKeramasPijat))
                                 .addGroup(jPanel2Layout.createSequentialGroup()
                                     .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(18, 18, 18)
-                                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(TextFieldMaskerRambut, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(jButton16)
+                                    .addComponent(ButtonTambahMaskerRambut)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jButton17))
+                                    .addComponent(ButtonKurangMaskerRambut))
                                 .addGroup(jPanel2Layout.createSequentialGroup()
                                     .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(18, 18, 18)
-                                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(TextFieldSemirRambut, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(jButton19)
+                                    .addComponent(ButtonTambahSemirRambut)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jButton18))))))
+                                    .addComponent(ButtonKurangSemirRambut))))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -271,57 +408,57 @@ public class MenuGUI extends javax.swing.JFrame {
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(TextFieldPotongRambutAnak, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton4)
-                    .addComponent(jButton5))
+                    .addComponent(ButtonTambahAnak)
+                    .addComponent(ButtonKurangAnak))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jButton6)
-                        .addComponent(jButton7))
+                        .addComponent(ButtonTambahRemaja)
+                        .addComponent(ButtonKurangRemaja))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(TextFieldPotongRambutRemaja, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(TextFieldPotongRambutDewasa, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton8)
-                            .addComponent(jButton9))))
+                            .addComponent(ButtonTambahDewasa)
+                            .addComponent(ButtonKurangDewasa))))
                 .addGap(8, 8, 8)
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(TextFieldCukurKumis, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton10)
-                    .addComponent(jButton11))
+                    .addComponent(ButtonTambahCukurKumis)
+                    .addComponent(ButtonKurangCukurKumis))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(TextFieldCukurJenggot, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton12)
-                    .addComponent(jButton13))
+                    .addComponent(ButtonTambahCukurJenggot)
+                    .addComponent(ButtonKurangCukurJenggot))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(TextFieldKeramasPijat, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton14)
-                    .addComponent(jButton15))
+                    .addComponent(ButtonTambahKeramasPijat)
+                    .addComponent(ButtonKurangKeramasPijat))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(TextFieldMaskerRambut, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton16)
-                    .addComponent(jButton17))
+                    .addComponent(ButtonTambahMaskerRambut)
+                    .addComponent(ButtonKurangMaskerRambut))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(TextFieldSemirRambut, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton19)
-                    .addComponent(jButton18))
+                    .addComponent(ButtonTambahSemirRambut)
+                    .addComponent(ButtonKurangSemirRambut))
                 .addContainerGap(20, Short.MAX_VALUE))
         );
 
@@ -344,8 +481,8 @@ public class MenuGUI extends javax.swing.JFrame {
                     .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, 53, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(TextFieldIsiNama, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(TextFieldIsiNoKursi, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
@@ -353,11 +490,11 @@ public class MenuGUI extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(TextFieldIsiNama, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(TextFieldIsiNoKursi, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -377,17 +514,17 @@ public class MenuGUI extends javax.swing.JFrame {
         jButton21.setText("Total");
         jButton21.setBorder(null);
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jTextArea1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jScrollPane1.setViewportView(jTextArea1);
+        TextAreaTotalBelanja.setColumns(20);
+        TextAreaTotalBelanja.setRows(5);
+        TextAreaTotalBelanja.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jScrollPane1.setViewportView(TextAreaTotalBelanja);
 
         jButton22.setBackground(new java.awt.Color(102, 102, 255));
         jButton22.setForeground(new java.awt.Color(255, 255, 255));
         jButton22.setText("Bayar");
         jButton22.setBorder(null);
 
-        jTextField12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        TextFieldBayar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jButton23.setBackground(new java.awt.Color(102, 102, 255));
         jButton23.setForeground(new java.awt.Color(255, 255, 255));
@@ -409,7 +546,7 @@ public class MenuGUI extends javax.swing.JFrame {
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 173, Short.MAX_VALUE)
                             .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jButton22, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField12))
+                            .addComponent(TextFieldBayar))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -434,7 +571,7 @@ public class MenuGUI extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jButton22, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(TextFieldBayar, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton23, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -452,19 +589,159 @@ public class MenuGUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
+    private void ButtonTambahAnakActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonTambahAnakActionPerformed
+        // TODO add your handling code here:
+        jmlPotongRambutAnak += 1;
+        TextFieldPotongRambutAnak.setText(jmlPotongRambutAnak.toString());
+    }//GEN-LAST:event_ButtonTambahAnakActionPerformed
+
     private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton20ActionPerformed
+
+    private void TextFieldPotongRambutAnakActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextFieldPotongRambutAnakActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TextFieldPotongRambutAnakActionPerformed
+
+    private void ButtonKurangAnakActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonKurangAnakActionPerformed
+        // TODO add your handling code here:
+        if(jmlPotongRambutAnak>0){
+            jmlPotongRambutAnak -= 1;
+            TextFieldPotongRambutAnak.setText(jmlPotongRambutAnak.toString());
+        }
+    }//GEN-LAST:event_ButtonKurangAnakActionPerformed
+
+    private void ButtonTambahRemajaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonTambahRemajaActionPerformed
+        // TODO add your handling code here:
+        jmlPotongRambutRemaja += 1;
+        TextFieldPotongRambutRemaja.setText(jmlPotongRambutRemaja.toString());
+    }//GEN-LAST:event_ButtonTambahRemajaActionPerformed
+
+    private void TextFieldPotongRambutRemajaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextFieldPotongRambutRemajaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TextFieldPotongRambutRemajaActionPerformed
+
+    private void ButtonKurangRemajaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonKurangRemajaActionPerformed
+        // TODO add your handling code here:
+        if(jmlPotongRambutRemaja>0){
+            jmlPotongRambutRemaja -= 1;
+            TextFieldPotongRambutRemaja.setText(jmlPotongRambutRemaja.toString());
+        }
+    }//GEN-LAST:event_ButtonKurangRemajaActionPerformed
+
+    private void ButtonTambahDewasaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonTambahDewasaActionPerformed
+        // TODO add your handling code here:
+        jmlPotongRambutDewasa += 1;
+        TextFieldPotongRambutDewasa.setText(jmlPotongRambutDewasa.toString());
+    }//GEN-LAST:event_ButtonTambahDewasaActionPerformed
+
+    private void TextFieldPotongRambutDewasaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextFieldPotongRambutDewasaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TextFieldPotongRambutDewasaActionPerformed
+
+    private void ButtonKurangDewasaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonKurangDewasaActionPerformed
+        // TODO add your handling code here:
+        if(jmlPotongRambutDewasa>0){
+            jmlPotongRambutDewasa -= 1;
+            TextFieldPotongRambutDewasa.setText(jmlPotongRambutDewasa.toString());
+        }
+    }//GEN-LAST:event_ButtonKurangDewasaActionPerformed
+
+    private void ButtonTambahCukurKumisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonTambahCukurKumisActionPerformed
+        // TODO add your handling code here:
+        jmlCukurKumis += 1;
+        TextFieldCukurKumis.setText(jmlCukurKumis.toString());
+    }//GEN-LAST:event_ButtonTambahCukurKumisActionPerformed
+
+    private void TextFieldCukurKumisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextFieldCukurKumisActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TextFieldCukurKumisActionPerformed
+
+    private void ButtonKurangCukurKumisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonKurangCukurKumisActionPerformed
+        // TODO add your handling code here:
+        if(jmlCukurKumis>0){
+            jmlCukurKumis -= 1;
+            TextFieldCukurKumis.setText(jmlCukurKumis.toString());
+        }
+    }//GEN-LAST:event_ButtonKurangCukurKumisActionPerformed
+
+    private void ButtonTambahCukurJenggotActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonTambahCukurJenggotActionPerformed
+        // TODO add your handling code here:
+        jmlCukurJanggut += 1;
+        TextFieldCukurJenggot.setText(jmlCukurJanggut.toString());
+    }//GEN-LAST:event_ButtonTambahCukurJenggotActionPerformed
+
+    private void TextFieldCukurJenggotActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextFieldCukurJenggotActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TextFieldCukurJenggotActionPerformed
+
+    private void ButtonKurangCukurJenggotActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonKurangCukurJenggotActionPerformed
+        // TODO add your handling code here:
+        if(jmlCukurJanggut>0){
+            jmlCukurJanggut -= 1;
+            TextFieldCukurJenggot.setText(jmlCukurJanggut.toString());
+        }
+    }//GEN-LAST:event_ButtonKurangCukurJenggotActionPerformed
+
+    private void ButtonTambahKeramasPijatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonTambahKeramasPijatActionPerformed
+        // TODO add your handling code here:
+        jmlKeramasPijat += 1;
+        TextFieldKeramasPijat.setText(jmlKeramasPijat.toString());
+    }//GEN-LAST:event_ButtonTambahKeramasPijatActionPerformed
+
+    private void TextFieldKeramasPijatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextFieldKeramasPijatActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TextFieldKeramasPijatActionPerformed
+
+    private void ButtonKurangKeramasPijatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonKurangKeramasPijatActionPerformed
+        // TODO add your handling code here:
+        if(jmlKeramasPijat>0){
+            jmlKeramasPijat -= 1;
+            TextFieldKeramasPijat.setText(jmlKeramasPijat.toString());
+        }
+        
+    }//GEN-LAST:event_ButtonKurangKeramasPijatActionPerformed
+
+    private void TextFieldMaskerRambutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextFieldMaskerRambutActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TextFieldMaskerRambutActionPerformed
+
+    private void ButtonTambahMaskerRambutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonTambahMaskerRambutActionPerformed
+        // TODO add your handling code here:
+        jmlMaskerRambut += 1;
+        TextFieldMaskerRambut.setText(jmlMaskerRambut.toString());
+    }//GEN-LAST:event_ButtonTambahMaskerRambutActionPerformed
+
+    private void ButtonKurangMaskerRambutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonKurangMaskerRambutActionPerformed
+        // TODO add your handling code here:
+        if(jmlMaskerRambut>0){
+            jmlMaskerRambut -= 1;
+            TextFieldMaskerRambut.setText(jmlMaskerRambut.toString());
+        }
+    }//GEN-LAST:event_ButtonKurangMaskerRambutActionPerformed
+
+    private void TextFieldSemirRambutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextFieldSemirRambutActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TextFieldSemirRambutActionPerformed
+
+    private void ButtonTambahSemirRambutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonTambahSemirRambutActionPerformed
+        // TODO add your handling code here:
+        jmlSemirRambut += 1;
+        TextFieldSemirRambut.setText(jmlSemirRambut.toString());
+    }//GEN-LAST:event_ButtonTambahSemirRambutActionPerformed
+
+    private void ButtonKurangSemirRambutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonKurangSemirRambutActionPerformed
+        // TODO add your handling code here:
+        if(jmlSemirRambut>0){
+            jmlSemirRambut -= 1;
+            TextFieldSemirRambut.setText(jmlSemirRambut.toString());
+        }
+    }//GEN-LAST:event_ButtonKurangSemirRambutActionPerformed
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -481,7 +758,6 @@ public class MenuGUI extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(MenuGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -492,29 +768,41 @@ public class MenuGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton ButtonKurangAnak;
+    private javax.swing.JButton ButtonKurangCukurJenggot;
+    private javax.swing.JButton ButtonKurangCukurKumis;
+    private javax.swing.JButton ButtonKurangDewasa;
+    private javax.swing.JButton ButtonKurangKeramasPijat;
+    private javax.swing.JButton ButtonKurangMaskerRambut;
+    private javax.swing.JButton ButtonKurangRemaja;
+    private javax.swing.JButton ButtonKurangSemirRambut;
+    private javax.swing.JButton ButtonTambahAnak;
+    private javax.swing.JButton ButtonTambahCukurJenggot;
+    private javax.swing.JButton ButtonTambahCukurKumis;
+    private javax.swing.JButton ButtonTambahDewasa;
+    private javax.swing.JButton ButtonTambahKeramasPijat;
+    private javax.swing.JButton ButtonTambahMaskerRambut;
+    private javax.swing.JButton ButtonTambahRemaja;
+    private javax.swing.JButton ButtonTambahSemirRambut;
+    private javax.swing.JTextArea TextAreaTotalBelanja;
+    private javax.swing.JTextField TextFieldBayar;
+    private javax.swing.JTextField TextFieldCukurJenggot;
+    private javax.swing.JTextField TextFieldCukurKumis;
+    private javax.swing.JTextField TextFieldIsiNama;
+    private javax.swing.JTextField TextFieldIsiNoKursi;
+    private javax.swing.JTextField TextFieldKeramasPijat;
+    private javax.swing.JTextField TextFieldMaskerRambut;
+    private javax.swing.JTextField TextFieldPotongRambutAnak;
+    private javax.swing.JTextField TextFieldPotongRambutDewasa;
+    private javax.swing.JTextField TextFieldPotongRambutRemaja;
+    private javax.swing.JTextField TextFieldSemirRambut;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton14;
-    private javax.swing.JButton jButton15;
-    private javax.swing.JButton jButton16;
-    private javax.swing.JButton jButton17;
-    private javax.swing.JButton jButton18;
-    private javax.swing.JButton jButton19;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton20;
     private javax.swing.JButton jButton21;
     private javax.swing.JButton jButton22;
     private javax.swing.JButton jButton23;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
@@ -529,18 +817,6 @@ public class MenuGUI extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField12;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
     // End of variables declaration//GEN-END:variables
 }
