@@ -255,7 +255,7 @@ public class Frame_Kasir extends javax.swing.JFrame {
         txt1.setForeground(new java.awt.Color(204, 204, 204));
         txt1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jLabel11.setFont(new java.awt.Font("Algerian", 3, 24)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Algerian", 3, 25)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/gunting2.png"))); // NOI18N
         jLabel11.setText("Barbershop Konoha");
