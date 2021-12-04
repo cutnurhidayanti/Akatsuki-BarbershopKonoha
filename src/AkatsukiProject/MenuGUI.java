@@ -162,13 +162,13 @@ public class MenuGUI extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 51));
 
-        jPanel1.setBackground(new java.awt.Color(0, 0, 51));
+        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
 
-        txtTagihan.setBackground(new java.awt.Color(0, 0, 51));
+        txtTagihan.setBackground(new java.awt.Color(102, 102, 102));
         txtTagihan.setFont(new java.awt.Font("Tahoma", 0, 60)); // NOI18N
-        txtTagihan.setForeground(new java.awt.Color(255, 0, 51));
+        txtTagihan.setForeground(new java.awt.Color(255, 255, 255));
         txtTagihan.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        txtTagihan.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 153, 0)), "Tagihan", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 14), new java.awt.Color(255, 153, 0))); // NOI18N
+        txtTagihan.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)), "Tagihan", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 14), new java.awt.Color(255, 255, 255))); // NOI18N
         txtTagihan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtTagihanActionPerformed(evt);
@@ -176,11 +176,9 @@ public class MenuGUI extends javax.swing.JFrame {
         });
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Diskon");
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Total Harga");
 
         txtTotalHarga.addActionListener(new java.awt.event.ActionListener() {
@@ -195,7 +193,6 @@ public class MenuGUI extends javax.swing.JFrame {
             }
         });
 
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("%  =  Rp");
 
         txtRp.addActionListener(new java.awt.event.ActionListener() {
@@ -210,7 +207,6 @@ public class MenuGUI extends javax.swing.JFrame {
             }
         });
 
-        txtKembalian.setBackground(new java.awt.Color(0, 0, 51));
         txtKembalian.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         txtKembalian.setForeground(new java.awt.Color(0, 255, 0));
         txtKembalian.addActionListener(new java.awt.event.ActionListener() {
@@ -220,15 +216,13 @@ public class MenuGUI extends javax.swing.JFrame {
         });
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Bayar");
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Kembalian");
 
-        jScrollPane1.setBackground(new java.awt.Color(0, 0, 51));
-        jScrollPane1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 153, 51)), "Data Penjualan", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 14), new java.awt.Color(255, 153, 51))); // NOI18N
+        jScrollPane1.setBackground(new java.awt.Color(102, 102, 102));
+        jScrollPane1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)), "Data Penjualan", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 14))); // NOI18N
 
         tblBarang.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -255,7 +249,7 @@ public class MenuGUI extends javax.swing.JFrame {
             }
         });
 
-        jPanel2.setBackground(new java.awt.Color(51, 0, 153));
+        jPanel2.setBackground(new java.awt.Color(51, 51, 51));
 
         txt1.setForeground(new java.awt.Color(204, 204, 204));
         txt1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -307,8 +301,8 @@ public class MenuGUI extends javax.swing.JFrame {
                 .addComponent(txt1, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        jPanel3.setBackground(new java.awt.Color(0, 0, 51));
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 153, 0), 1, true), "Input Penjualan", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 14), new java.awt.Color(255, 153, 0))); // NOI18N
+        jPanel3.setBackground(new java.awt.Color(102, 102, 102));
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true), "Input Penjualan", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 14), new java.awt.Color(255, 255, 255))); // NOI18N
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(204, 204, 204));
@@ -383,10 +377,9 @@ public class MenuGUI extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        rdb1.setBackground(new java.awt.Color(0, 0, 51));
+        rdb1.setBackground(new java.awt.Color(102, 102, 102));
         btnGrup.add(rdb1);
         rdb1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        rdb1.setForeground(new java.awt.Color(255, 255, 255));
         rdb1.setText("50.000");
         rdb1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -394,10 +387,9 @@ public class MenuGUI extends javax.swing.JFrame {
             }
         });
 
-        rdb2.setBackground(new java.awt.Color(0, 0, 51));
+        rdb2.setBackground(new java.awt.Color(102, 102, 102));
         btnGrup.add(rdb2);
         rdb2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        rdb2.setForeground(new java.awt.Color(255, 255, 255));
         rdb2.setText("100.000");
         rdb2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -411,10 +403,9 @@ public class MenuGUI extends javax.swing.JFrame {
             }
         });
 
-        rdb3.setBackground(new java.awt.Color(0, 0, 51));
+        rdb3.setBackground(new java.awt.Color(102, 102, 102));
         btnGrup.add(rdb3);
         rdb3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        rdb3.setForeground(new java.awt.Color(255, 255, 255));
         rdb3.setText("250.000");
         rdb3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
