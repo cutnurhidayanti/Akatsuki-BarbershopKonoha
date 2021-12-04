@@ -1,4 +1,4 @@
-package projectuts;
+package AkatsukiProject;
 
 import javax.swing.table.DefaultTableModel;
 

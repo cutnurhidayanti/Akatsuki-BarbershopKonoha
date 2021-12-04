@@ -1,18 +1,17 @@
+/**
+ *
+ * @author Akatsuki
+ */
 
-package projectuts;
+package AkatsukiProject;
 
 import java.util.Locale;
 import java.util.StringTokenizer;
 import java.text.NumberFormat;
 import javax.swing.SpinnerNumberModel;
 import javax.swing.table.DefaultTableModel;
-/**
- *
 
- * @author ACER
- */
-
-public class Frame_Kasir extends javax.swing.JFrame {   
+public class MenuGUI extends javax.swing.JFrame {   
     public String menu_barang;
     public StringTokenizer token;
     public String ganti = "";
@@ -27,7 +26,7 @@ public class Frame_Kasir extends javax.swing.JFrame {
     double  nama, harga, jmlhjual,total;
     int a=0;
     
-    public Frame_Kasir() {
+    public MenuGUI() {
         initComponents();
         
         
@@ -199,6 +198,12 @@ public class Frame_Kasir extends javax.swing.JFrame {
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("%  =  Rp");
 
+        txtRp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtRpActionPerformed(evt);
+            }
+        });
+
         txtBayar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtBayarActionPerformed(evt);
@@ -275,14 +280,14 @@ public class Frame_Kasir extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addComponent(txt1)
                 .addGap(151, 151, 151))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+            .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel11)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(49, 49, 49)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(47, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -291,14 +296,15 @@ public class Frame_Kasir extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGap(72, 72, 72)
-                                .addComponent(jLabel11))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGap(34, 34, 34)
-                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 175, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(48, 48, 48)))
                 .addComponent(txt1, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -484,10 +490,10 @@ public class Frame_Kasir extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(34, 34, 34)
+                        .addGap(49, 49, 49)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(txtTagihan))
@@ -583,28 +589,28 @@ public class Frame_Kasir extends javax.swing.JFrame {
         
         switch(menu_barang){
         case "Potong Rambut Anak":
-            txtHarga.setText(String.valueOf("10000"));
-            break;
-        case "Potong Rambut Remaja":
             txtHarga.setText(String.valueOf("15000"));
             break;
-        case "Potong Rambut Dewasa":
-            txtHarga.setText(String.valueOf("20000"));
+        case "Potong Rambut Remaja":
+            txtHarga.setText(String.valueOf("35000"));
             break;
-        case "Semir Rambut":
+        case "Potong Rambut Dewasa":
             txtHarga.setText(String.valueOf("40000"));
             break;
-        case "Cukur Kumis":
-            txtHarga.setText(String.valueOf("60000"));
-            break;
-        case "Cukur Janggut":
+        case "Semir Rambut":
             txtHarga.setText(String.valueOf("70000"));
             break;
+        case "Cukur Kumis":
+            txtHarga.setText(String.valueOf("10000"));
+            break;
+        case "Cukur Janggut":
+            txtHarga.setText(String.valueOf("15000"));
+            break;
         case "Keramas Pijat":
-            txtHarga.setText(String.valueOf("80000"));
+            txtHarga.setText(String.valueOf("20000"));
             break;
         case "Masker Rambut":
-            txtHarga.setText(String.valueOf("90000"));
+            txtHarga.setText(String.valueOf("40000"));
             break;
         
         }
@@ -643,6 +649,10 @@ public class Frame_Kasir extends javax.swing.JFrame {
         btnHapus();
     }//GEN-LAST:event_btnHapusActionPerformed
 
+    private void txtRpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtRpActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtRpActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -660,20 +670,21 @@ public class Frame_Kasir extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Frame_Kasir.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Frame_Kasir.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Frame_Kasir.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Frame_Kasir.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Frame_Kasir().setVisible(true);
+                new MenuGUI().setVisible(true);
             }
         });
     }

@@ -1,10 +1,10 @@
 
-package projectuts;
+package AkatsukiProject;
 
 public class inputDataPenjualan {
     public static void main(String[] args) {
 
-        Frame_Kasir menu=new Frame_Kasir();
+        MenuGUI menu=new MenuGUI();
         menu.setVisible(true);
         
     }
