@@ -12,7 +12,7 @@ import javax.swing.SpinnerNumberModel;
 import javax.swing.table.DefaultTableModel;
 
 public class MenuGUI extends javax.swing.JFrame {   
-    public String menu_barang;
+    public String menu_jasa;
     public StringTokenizer token;
     public String ganti = "";
     
@@ -22,8 +22,8 @@ public class MenuGUI extends javax.swing.JFrame {
     DefaultTableModel model;
     DefaultTableModel dataModel;
     
-    public long harga_barang;
-    double  nama, harga, jmlhjual,total;
+    public long harga_jasa;
+    double  nama, harga, jmlhpesanan,total;
     int a=0;
     
     public MenuGUI() {
@@ -41,10 +41,10 @@ public class MenuGUI extends javax.swing.JFrame {
         
         //mengeksekusi isi tabel
         a=a+1;
-        jmlhjual=Float.parseFloat(spnJumlah.getValue().toString());
+        jmlhpesanan=Float.parseFloat(spnJumlah.getValue().toString());
         harga =Float.parseFloat(txtHarga.getText());
-        total=(double)(jmlhjual*harga);
-        model.insertRow(model.getRowCount(), new Object[]{String.valueOf(a),menu_barang,txtHarga.getText(),spnJumlah.getValue().toString(),String.valueOf(total)});
+        total=(double)(jmlhpesanan*harga);
+        model.insertRow(model.getRowCount(), new Object[]{String.valueOf(a),menu_jasa,txtHarga.getText(),spnJumlah.getValue().toString(),String.valueOf(total)});
         
         spnJumlah.setValue(((SpinnerNumberModel) spnJumlah.getModel()).getMinimum());
         cmbBarang.setSelectedItem("Menu Pilihan");
@@ -575,9 +575,9 @@ public class MenuGUI extends javax.swing.JFrame {
 
     private void cmbBarangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbBarangActionPerformed
         // TODO add your handling code here:
-        menu_barang = (String) cmbBarang.getSelectedItem();
+        menu_jasa = (String) cmbBarang.getSelectedItem();
         
-        switch(menu_barang){
+        switch(menu_jasa){
         case "Potong Rambut Anak":
             txtHarga.setText(String.valueOf("15000"));
             break;
