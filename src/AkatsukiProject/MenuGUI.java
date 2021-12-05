@@ -31,7 +31,7 @@ public class MenuGUI extends javax.swing.JFrame {
         
         
         //input
-        model = (DefaultTableModel) tblBarang.getModel();
+        model = (DefaultTableModel) tblPesanan.getModel();
         //remove
         model.getDataVector().removeAllElements();
         revalidate();
@@ -50,7 +50,7 @@ public class MenuGUI extends javax.swing.JFrame {
         cmbBarang.setSelectedItem("Menu Pilihan");
         
         //menjumlahkan data pada kolom total(harga)
-        dataModel = (DefaultTableModel) tblBarang.getModel();
+        dataModel = (DefaultTableModel) tblPesanan.getModel();
         int jumlah = dataModel.getRowCount();
         totalHarga = 0;
        
@@ -105,7 +105,7 @@ public class MenuGUI extends javax.swing.JFrame {
     }
     
     private void btnHapus(){
-        ((DefaultTableModel)tblBarang.getModel()).setNumRows(0);
+        ((DefaultTableModel)tblPesanan.getModel()).setNumRows(0);
         
         
         txtTagihan.setText("");
@@ -138,7 +138,7 @@ public class MenuGUI extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tblBarang = new javax.swing.JTable();
+        tblPesanan = new javax.swing.JTable();
         btnHitung = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         txt1 = new javax.swing.JTextField();
@@ -168,7 +168,7 @@ public class MenuGUI extends javax.swing.JFrame {
         txtTagihan.setFont(new java.awt.Font("Tahoma", 0, 60)); // NOI18N
         txtTagihan.setForeground(new java.awt.Color(255, 255, 255));
         txtTagihan.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        txtTagihan.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)), "Tagihan", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 14), new java.awt.Color(255, 255, 255))); // NOI18N
+        txtTagihan.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)), "Tagihan", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 13), new java.awt.Color(255, 255, 255))); // NOI18N
         txtTagihan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtTagihanActionPerformed(evt);
@@ -222,14 +222,14 @@ public class MenuGUI extends javax.swing.JFrame {
         jLabel9.setText("Kembalian");
 
         jScrollPane1.setBackground(new java.awt.Color(102, 102, 102));
-        jScrollPane1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)), "Data Penjualan", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 14))); // NOI18N
+        jScrollPane1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)), "Data Pesanan", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 13))); // NOI18N
 
-        tblBarang.setModel(new javax.swing.table.DefaultTableModel(
+        tblPesanan.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "No.", "Nama Barang", "Harga", "Jumlah", "Total"
+                "No.", "Nama Jasa", "Harga", "Jumlah", "Total"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -240,7 +240,7 @@ public class MenuGUI extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(tblBarang);
+        jScrollPane1.setViewportView(tblPesanan);
 
         btnHitung.setText("Hitung");
         btnHitung.addActionListener(new java.awt.event.ActionListener() {
@@ -302,7 +302,7 @@ public class MenuGUI extends javax.swing.JFrame {
         );
 
         jPanel3.setBackground(new java.awt.Color(102, 102, 102));
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true), "Input Penjualan", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 14), new java.awt.Color(255, 255, 255))); // NOI18N
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true), "Input Pesanan", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 13), new java.awt.Color(255, 255, 255))); // NOI18N
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(204, 204, 204));
@@ -431,7 +431,7 @@ public class MenuGUI extends javax.swing.JFrame {
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
                         .addComponent(txtTagihan, javax.swing.GroupLayout.PREFERRED_SIZE, 459, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -704,7 +704,7 @@ public class MenuGUI extends javax.swing.JFrame {
     private javax.swing.JRadioButton rdb2;
     private javax.swing.JRadioButton rdb3;
     private javax.swing.JSpinner spnJumlah;
-    private javax.swing.JTable tblBarang;
+    private javax.swing.JTable tblPesanan;
     private javax.swing.JTextField txt1;
     private javax.swing.JTextField txtBayar;
     private javax.swing.JTextField txtHarga;
