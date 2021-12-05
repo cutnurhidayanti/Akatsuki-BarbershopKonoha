@@ -2,7 +2,7 @@
 Reposiroty Project akhir lab PBO B
 
 ## Deskripsi
-Kelompok Akatsuki adalah kelompok pendiri Barbershop yang bernama Barbershop Konohagakure, dimana Barbershop ini diperuntukkan bagi para ninja dan masyarakat Konoha Khususnya dan masyarakat lain pada umumnya
+Kelompok Akatsuki adalah kelompok pendiri Barbershop yang bernama Barbershop Konohagakure, dimana Barbershop ini diperuntukkan bagi para ninja dan masyarakat Konoha Khususnya dan masyarakat lain pada umumnya. Itachi pernah pangkas disini 🤭
 
 ## Kelompok Akatsuki
 project Aplikasi Kasir Barbershop Konohagakure
