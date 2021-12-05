@@ -16,8 +16,8 @@ public class MenuGUI extends javax.swing.JFrame {
     public StringTokenizer token;
     public String ganti = "";
     
-     double totalHarga;
-     double dataTotal;
+    double totalHarga;
+    double dataTotal;
     
     DefaultTableModel model;
     DefaultTableModel dataModel;
@@ -28,15 +28,14 @@ public class MenuGUI extends javax.swing.JFrame {
     
     public MenuGUI() {
         initComponents();
-        
-        
+       
         //input
         model = (DefaultTableModel) tblPesanan.getModel();
         //remove
         model.getDataVector().removeAllElements();
-        revalidate();
-        
+        revalidate(); 
     }
+    
     private void btnTambah(){
         
         //mengeksekusi isi tabel
@@ -55,16 +54,16 @@ public class MenuGUI extends javax.swing.JFrame {
         totalHarga = 0;
        
         for (int i =0; i < jumlah; i++){
-        dataTotal= Double.valueOf(dataModel.getValueAt(i, 4).toString());
-        totalHarga += dataTotal;
-//        
-        //txtTagihan ke satuan rupiah
-        double angka = totalHarga ;
-        ganti = NumberFormat.getNumberInstance(Locale.US).format(angka);
-        token = new StringTokenizer(ganti, ".");
-        ganti = token.nextToken();
-        ganti = ganti.replace(',', '.');
-        txtTagihan.setText(String.valueOf("Rp"+ganti));
+            dataTotal= Double.valueOf(dataModel.getValueAt(i, 4).toString());
+            totalHarga += dataTotal;
+            
+            //txtTagihan ke satuan rupiah
+            double angka = totalHarga ;
+            ganti = NumberFormat.getNumberInstance(Locale.US).format(angka);
+            token = new StringTokenizer(ganti, ".");
+            ganti = token.nextToken();
+            ganti = ganti.replace(',', '.');
+            txtTagihan.setText(String.valueOf("Rp"+ganti));
         }
         
         txtHarga.setText("");
@@ -84,8 +83,7 @@ public class MenuGUI extends javax.swing.JFrame {
             txtPersen.setText(String.valueOf("5"));
             txtRp.setText(String.valueOf(diskon));
             txtTotalHarga.setText(String.valueOf(d));
-        }else {
-            
+        }else { 
             txtTotalHarga.setText(String.valueOf(Tagihan));
         }
    
@@ -106,8 +104,6 @@ public class MenuGUI extends javax.swing.JFrame {
     
     private void btnHapus(){
         ((DefaultTableModel)tblPesanan.getModel()).setNumRows(0);
-        
-        
         txtTagihan.setText("");
         txtPersen.setText("");
         txtRp.setText("");
@@ -222,7 +218,7 @@ public class MenuGUI extends javax.swing.JFrame {
         jLabel9.setText("Kembalian");
 
         jScrollPane1.setBackground(new java.awt.Color(102, 102, 102));
-        jScrollPane1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)), "Data Pesanan", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 13))); // NOI18N
+        jScrollPane1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Data Pesanan", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 13))); // NOI18N
 
         tblPesanan.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -281,7 +277,7 @@ public class MenuGUI extends javax.swing.JFrame {
                 .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(49, 49, 49)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(47, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -351,9 +347,9 @@ public class MenuGUI extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(txtHarga)
-                    .addComponent(cmbBarang, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(cmbBarang, 0, 186, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                        .addComponent(spnJumlah, javax.swing.GroupLayout.DEFAULT_SIZE, 81, Short.MAX_VALUE)
+                        .addComponent(spnJumlah)
                         .addGap(18, 18, 18)
                         .addComponent(btnTambah)))
                 .addContainerGap(12, Short.MAX_VALUE))
@@ -431,7 +427,7 @@ public class MenuGUI extends javax.swing.JFrame {
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
                         .addComponent(txtTagihan, javax.swing.GroupLayout.PREFERRED_SIZE, 459, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -483,7 +479,7 @@ public class MenuGUI extends javax.swing.JFrame {
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(49, 49, 49)
+                        .addGap(34, 34, 34)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(txtTagihan))
@@ -526,13 +522,13 @@ public class MenuGUI extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 618, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 631, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -561,7 +557,6 @@ public class MenuGUI extends javax.swing.JFrame {
     private void btnHitungActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHitungActionPerformed
         // TODO add your handling code here:
         btnHitung();
-        
     }//GEN-LAST:event_btnHitungActionPerformed
 
     private void txtHargaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtHargaActionPerformed
@@ -578,55 +573,51 @@ public class MenuGUI extends javax.swing.JFrame {
         menu_jasa = (String) cmbBarang.getSelectedItem();
         
         switch(menu_jasa){
-        case "Potong Rambut Anak":
-            txtHarga.setText(String.valueOf("15000"));
-            break;
-        case "Potong Rambut Remaja":
-            txtHarga.setText(String.valueOf("35000"));
-            break;
-        case "Potong Rambut Dewasa":
-            txtHarga.setText(String.valueOf("40000"));
-            break;
-        case "Semir Rambut":
-            txtHarga.setText(String.valueOf("70000"));
-            break;
-        case "Cukur Kumis":
-            txtHarga.setText(String.valueOf("10000"));
-            break;
-        case "Cukur Janggut":
-            txtHarga.setText(String.valueOf("15000"));
-            break;
-        case "Keramas Pijat":
-            txtHarga.setText(String.valueOf("20000"));
-            break;
-        case "Masker Rambut":
-            txtHarga.setText(String.valueOf("40000"));
-            break;
-        
+            case "Potong Rambut Anak":
+                txtHarga.setText(String.valueOf("15000"));
+                break;
+            case "Potong Rambut Remaja":
+                txtHarga.setText(String.valueOf("35000"));
+                break;
+            case "Potong Rambut Dewasa":
+                txtHarga.setText(String.valueOf("40000"));
+                break;
+            case "Semir Rambut":
+                txtHarga.setText(String.valueOf("70000"));
+                break;
+            case "Cukur Kumis":
+                txtHarga.setText(String.valueOf("10000"));
+                break;
+            case "Cukur Janggut":
+                txtHarga.setText(String.valueOf("15000"));
+                break;
+            case "Keramas Pijat":
+                txtHarga.setText(String.valueOf("20000"));
+                break;
+            case "Masker Rambut":
+                txtHarga.setText(String.valueOf("40000"));
+                break;
         }
-        
-      
     }//GEN-LAST:event_cmbBarangActionPerformed
 
     private void rdb1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdb1ActionPerformed
         // TODO add your handling code here:
         if(rdb1.isSelected()){
-        txtBayar.setText(String.valueOf("50000"));
+            txtBayar.setText(String.valueOf("50000"));
         }
-        
     }//GEN-LAST:event_rdb1ActionPerformed
 
     private void rdb2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdb2ActionPerformed
         // TODO add your handling code here:
         if(rdb2.isSelected()){
-        txtBayar.setText(String.valueOf("100000"));
+            txtBayar.setText(String.valueOf("100000"));
         }
     }//GEN-LAST:event_rdb2ActionPerformed
 
     private void rdb3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdb3ActionPerformed
         // TODO add your handling code here:
         if(rdb3.isSelected()){
-        txtBayar.setText(String.valueOf("250000"));
+            txtBayar.setText(String.valueOf("250000"));
         }
     }//GEN-LAST:event_rdb3ActionPerformed
 
