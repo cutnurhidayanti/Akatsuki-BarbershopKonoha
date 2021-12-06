@@ -7,7 +7,7 @@ Kelompok Akatsuki adalah kelompok pendiri Barbershop yang bernama Barbershop Kon
 ## Kelompok Akatsuki
 project Aplikasi Kasir Barbershop Konohagakure
 
-##Cara Running Progrma
+## Cara Running Progrma
   1. Clone/download repository
   2. Buka Command Prompt
   3. Buka cmd dan masuk ke folder Src "D:\Documents\github\Akatsuki-BarbershopKonoha\src"
