@@ -15,9 +15,11 @@ project Aplikasi Kasir Barbershop Konohagakure
   5. Execute Program di CMD dengan cara ketik "java Main.Main"
   6. Program siap digunakan
 
+## CEO
+Aditya Rosiadi (2008107010035) -> Pain
+
 ## Anggota : 
-              1. Aditya Rosiadi (2008107010035)
-              2. Cut Nurhidayanti (2008107010027)
-              3. Dhafa Aryanda (2008107010032)
-              4. Safira (2008107010022)
-              5. Sima Maulina (2008107010070)
+              1. Cut Nurhidayanti (2008107010027) -> Itachi Uchiha
+              2. Dhafa Aryanda (2008107010032) -> Kisame Hoshigake
+              3. Safira (2008107010022) -> Deidara
+              4. Sima Maulina (2008107010070) -> Obito Uchiha
