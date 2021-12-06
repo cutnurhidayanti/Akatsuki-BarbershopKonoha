@@ -94,7 +94,7 @@ public class MenuGUI extends javax.swing.JFrame {
         float kembalian = Float.parseFloat(txtTotalHarga.getText());
         
         double angka = bayar-kembalian ;
-        ganti = NumberFormat.getNumberInstance(Locale.US).format(angka);
+        ganti = NumberFormat.getNumberInstance(Locale.US).format(angka);//format mata uang
         token = new StringTokenizer(ganti, ".");
         ganti = token.nextToken();
         ganti = ganti.replace(',', '.');
@@ -456,18 +456,16 @@ public class MenuGUI extends javax.swing.JFrame {
                                 .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addGroup(jPanel1Layout.createSequentialGroup()
-                                            .addComponent(rdb1)
-                                            .addGap(18, 18, 18)
-                                            .addComponent(rdb2)
-                                            .addGap(18, 18, 18)
-                                            .addComponent(rdb3))
-                                        .addComponent(txtBayar))
                                     .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGap(8, 8, 8)
-                                        .addComponent(txtKembalian, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(rdb1)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(rdb2)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(rdb3)
+                                        .addGap(0, 0, Short.MAX_VALUE))
+                                    .addComponent(txtBayar)
+                                    .addComponent(txtKembalian))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(btnHitung, javax.swing.GroupLayout.DEFAULT_SIZE, 83, Short.MAX_VALUE)
                                     .addComponent(btnHapus, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
@@ -564,7 +562,7 @@ public class MenuGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_txtHargaActionPerformed
 
     private void btnTambahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTambahActionPerformed
-        // TODO add your handling code here:
+        // TODO add your handling code here:x
         btnTambah();
     }//GEN-LAST:event_btnTambahActionPerformed
 
