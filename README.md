@@ -16,7 +16,7 @@ project Aplikasi Kasir Barbershop Konohagakure
   6. Program siap digunakan
 
 ## CEO
-Aditya Rosiadi (2008107010035) -> Pain
+              Aditya Rosiadi (2008107010035) -> Pain
 
 ## Anggota : 
               1. Cut Nurhidayanti (2008107010027) -> Itachi Uchiha
