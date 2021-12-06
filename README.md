@@ -23,3 +23,6 @@ project Aplikasi Kasir Barbershop Konohagakure
               2. Dhafa Aryanda (2008107010032) -> Kisame Hoshigake
               3. Safira (2008107010022) -> Deidara
               4. Sima Maulina (2008107010070) -> Obito Uchiha
+             
+## Link Vidio
+              https://youtu.be/ZMOphNJl5hY
